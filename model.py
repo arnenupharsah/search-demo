@@ -2,7 +2,7 @@ import requests
 import json
 import web
 import sqlite3
-db = web.database(dbn='sqlite', db='streamz')
+db = web.database(dbn='sqlite', db='streamz.db')
 
 def new_user(firstname,lastname,phone,email,username):
     db.insert('user', firstname=firstname, lastname=lastname, email=email, phone=phone, username=username)
